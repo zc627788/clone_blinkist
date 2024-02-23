@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex justify-between items-center" style={{ flex: 11 }}>
           <button
             data-test-id="toggle-categories-menu-button"
-            className="flex items-center cursor-pointer font-medium text-midnight hover:text-indigo-500 focus:text-indigo-500 active:text-indigo-500"
+            className="category flex items-center cursor-pointer font-medium text-midnight hover:text-indigo-500 focus:text-indigo-500 active:text-indigo-500"
             onClick={handleToggle}
           >
             Categories

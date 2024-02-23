@@ -1,5 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
+import Button from "./common/Button";
 
 const AudioHeroBanner = () => (
   <div className="audio-hero ">
@@ -10,17 +11,10 @@ const AudioHeroBanner = () => (
             More knowledge <br className="hidden md:inline" /> in less time
           </h1>
           <div className="audio-hero-content__subheadline text-gray-700 text-lg mb-8 lg:mb-8 ">
-            Perfect for curious people who love to learn, busy people who don’t have time to read, and even people who aren’t into reading.
+            Perfect for curious people who love to learn, busy people who don’t
+            have time to read, and even people who aren’t into reading.
           </div>
-          <a
-            href="/en/onboarding/welcome-wizard"
-            style={{ color: '#03314b' }}
-            data-test-id="start-trial-button"
-            data-event-category="body-20210610-audio_hero"
-            type="submit"
-          >
-            <span className="color button">Start your free trial</span>
-          </a>
+          <Button title={"Start your free trial"} />
         </div>
         <div className="audio-hero-image audio-hero__image">
           <div className="audio-hero-image__container">
@@ -36,7 +30,7 @@ const AudioHeroBanner = () => (
         </div>
       </div>
     </div>
-  </div >
+  </div>
 );
 
 export default AudioHeroBanner;
