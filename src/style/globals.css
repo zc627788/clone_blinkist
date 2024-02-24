@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "CeraPRO";
+  src: url("/public/fonts/Fontspring-DEMO-cerapro-black.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-pale-mint {
+  background-color: #aaf0d1;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+}
+
+.section {
+  padding: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.footer {
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.bg-light-pale-mint-grey {
+  background-color: rgba(248, 250, 249, 1) !important;
+}
+
+/* Base styles */
+.audio-hero-content__subheadline {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #042330;
+  /* Note: This color value will override the one in #3a4649 */
+  grid-column: auto/span 12;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.main-feature__headline {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #03314b;
+  position: relative;
+}
+.main-feature__subheadline {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3a4649;
+}
+.rotating-headers__header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #03314b;
+}
+.figures__data {
+  padding: 3rem 1rem;
+  background: #f1f6f4;
+}
+.figures__percentage {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #03314b;
+  margin-right: 1rem;
+  color: #0365f2;
+}
+
+.figures__text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3a4649;
+  flex: 1 1;
+}
+.trial-duration-explanation__subheader {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #3a4649;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+.trial-duration-explanation__books-and-podcasts {
+  display: inline;
+  background: linear-gradient(180deg, transparent 65%, #fedc86 65%);
+  font-weight: bold;
+}
+.trial-message__inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.app-reviews__user-reviews {
+  grid-column: auto / span 12;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .audio-hero-content__headline {
+    margin-bottom: 1.5rem;
+    grid-area: 1/1/1/13;
+  }
+  .app-reviews__user-reviews {
+    grid-column: auto / span 8;
+    width: 100%;
+    grid-column-start: 3;
+  }
+
+  .trial-message__inner {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+  .trial-duration-explanation__subheader {
+    text-align: center;
+  }
+  .audio-hero-content__subheadline {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #3a4649;
+    margin-bottom: 2rem;
+    grid-area: 2/1/2/12;
+  }
+  .rotating-headers__header {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.33;
+    color: #03314b;
+  }
+
+  .main-features__headline {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #03314b;
+  }
+  .main-feature__headline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.33;
+    color: #03314b;
+  }
+  .main-feature__subheadline {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #3a4649;
+  }
+  .figures__data {
+    padding: 3rem 2rem;
+  }
+  .figures__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #3a4649;
+  }
+}
+.figures__more-info {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.57;
+  color: #6d787e;
+  padding: 1rem;
+  text-align: right;
+}
+.category {
+  visibility: hidden;
+}
+@media (min-width: 1024px) {
+  .audio-hero-content__headline {
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+  .category {
+    visibility: visible;
+  }
+
+  .audio-hero-content__subheadline {
+    margin-bottom: 2rem;
+    grid-area: 2/1/2/8;
+  }
+}
+
+.audio-hero-content__headline--h2-mobile {
+  font-size: 3rem;
+}
+
+.audio-hero-content__headline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.33;
+  color: #03314b;
+  grid-column: auto/span 12;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.button--block {
+  min-width: 18.5rem;
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #03314b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.6875rem 5rem 0.8125rem;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  background-color: #2ce080;
+  border: #2ce080 0.125rem solid;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+}
+.button:hover {
+  color: #03314b;
+  background-color: #20ba68;
+  border-color: #20ba68;
+}
+.audio-hero-image {
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../public/images/background_wave-big.svg");
+}
+
+.audio-hero-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 0;
+  display: block;
+  width: 23.5vw;
+  height: 100%;
+  background-color: #0365f2;
+}
+.message {
+  position: relative;
+  padding: 1rem;
+  background-color: #f1f6f4;
+  border-radius: 0.25rem;
+}
+
+.message--background-blue {
+  background-color: #d7e9ff;
+}
+.trial-message__description {
+  margin-right: 15px;
+}
+.trial-message__description {
+  flex: 1;
+}
