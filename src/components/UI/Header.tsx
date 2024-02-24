@@ -1,9 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Navigation from './Navigation';
 
 const Header = () => {
   const [clicked, setClicked] = useState(false)
+
+  const [isSticky, setIsSticky] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   let arrowIcon = <path fillRule="evenodd" clipRule="evenodd" d="M12 14.879l-7.94-7.94a1.5 1.5 0 10-2.12 2.122l9 9a1.5 1.5 0 002.12 0l9-9a1.5 1.5 0 00-2.12-2.122L12 14.88z" fill="currentColor"></path>
   if (clicked) {
     arrowIcon = <path fillRule="evenodd" clipRule="evenodd" d="M12 9.121l7.94 7.94a1.5 1.5 0 112.12-2.122l-9-9a1.5 1.5 0 01-2.12 0l-9 9a1.5 1.5 0 112.12 2.122L12 9.121z" fill="currentColor"></path>
@@ -13,7 +33,7 @@ const Header = () => {
   }
 
   return (
-    <div className="bg-white pt-4 pb-4  sticky top-0 z-50 h-16">
+    <div ref={headerRef} className={`bg-white pt-4 pb-4 top-0 z-50 h-16 ${isSticky ? 'sticky' : ''}`}>
       <div className="max-w-5xl mx-auto flex justify-between  ">
         <div className="flex-grow-1" style={{ flex: 1 }}>
           <Link href="/en/" >

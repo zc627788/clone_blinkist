@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import Button from "./common/Button";
+import Button from "../common/Button";
 const staticsData = [
   "Be more knowledgeable",
   "Be more successful",
@@ -18,7 +18,7 @@ const phoneData = [
 ];
 
 const Statics = () => (
-  <div className=" py-6 m:py-8 l:py-12  mt-12">
+  <div className=" py-6 m:py-8 l:py-12  mt-12 max-w-5xl mx-auto  ">
     <div className=" flex justify-between ">
       <div className="rotating-headers__header  justify-between flex-1">
         {staticsData.map((title) => (

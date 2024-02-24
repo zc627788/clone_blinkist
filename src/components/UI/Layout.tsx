@@ -9,7 +9,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => (
   <div className='bg-white'>
     <Header />
-    <main className="max-w-5xl mx-auto  ">{children}</main>
+    <main className="mx-auto  ">{children}</main>
     <Footer />
   </div>
 );
