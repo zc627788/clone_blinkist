@@ -11,7 +11,7 @@ const AudioHeroBanner = () => (
             <h1 className="audio-hero-content__headline audio-hero-content__headline--h2-mobile">
               More knowledge <br className="hidden md:inline" /> in less time
             </h1>
-            <div className="audio-hero-content__subheadline text-gray-700 ">
+            <div className="audio-hero-content__subHeadline text-gray-700 ">
               Perfect for curious people who love to learn, busy people who don’t
               have time to read, and even people who aren’t into reading.
             </div>
@@ -25,7 +25,7 @@ const AudioHeroBanner = () => (
                 loading="lazy"
                 width={450}
                 height={350}
-                className="pict__image audio-hero-image__phone__image mt-14 relative top-12 left-48 z-10"
+                className="pict__image audio-hero-image__phone__image   lg:top-12 lg:left-60 md:top-10 md:left-40 "
               />
             </div>
           </div>

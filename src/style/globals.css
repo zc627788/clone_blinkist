@@ -87,7 +87,7 @@ a {
 }
 
 /* Base styles */
-.audio-hero-content__subheadline {
+.audio-hero-content__subHeadline {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -106,7 +106,7 @@ a {
   position: relative;
 }
 
-.main-feature__subheadline {
+.main-feature__subHeadline {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -163,7 +163,7 @@ a {
   margin-bottom: 0.5rem;
 }
 
-.book-card-mini .book-card-mini__subheadline {
+.book-card-mini .book-card-mini__subHeadline {
   font-size: .875rem;
   font-weight: 400;
   line-height: 1.57;
@@ -327,7 +327,7 @@ mark {
   background: none;
 }
 
-.subheadline {
+.subHeadline {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -446,10 +446,19 @@ mark {
   justify-content: flex-end;
 }
 
-.footer-bottom__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.highlight {
+  animation: light 1s ease infinite alternate;
+}
+
+@keyframes light {
+  from {
+    color: #909294;
+
+  }
+
+  to {
+    color: #130f0f;
+  }
 }
 
 .footer-bottom__headline-and-mobile-badges {
@@ -538,7 +547,7 @@ mark {
   position: relative;
   display: grid;
   text-align: center;
-  background: url("https://www.blinkist.com/packs/static/audio-hero/i…s/background_wave_mobile-33185226d3f6732ad2ee.svg") no-repeat top right;
+  background: url("https://www.blinkist.com/packs/static/audio-hero/images/background_wave_mobile-33185226d3f6732ad2ee.svg") no-repeat top right;
   background-size: cover;
 }
 
@@ -562,7 +571,7 @@ mark {
   margin-bottom: 1rem;
 }
 
-.audio-hero-content__subheadline {
+.audio-hero-content__subHeadline {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -626,7 +635,7 @@ mark {
   left: 100%;
   z-index: 0;
   display: block;
-  width: 23.5vw;
+  width: 100vw;
   height: 100%;
   background-color: #0365f2;
 }
@@ -685,6 +694,20 @@ mark {
   }
 }
 
+.audio-hero-image__container {
+  margin-bottom: 0;
+  grid-area: 1 / 1 / 1 / 8;
+  padding: 0 2rem;
+}
+
+.audio-hero-image__phone__image {
+  position: relative;
+  bottom: -2.8125rem;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
 @media (min-width:416px) {
   .containerTop {
     padding-left: 3rem;
@@ -703,6 +726,11 @@ mark {
   .footer-bottom__container {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .footer-bottom__inner {
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footer-links__grid {
@@ -725,7 +753,18 @@ mark {
     grid-area: 1/1/1/13;
   }
 
-  .audio-hero-content__subheadline {
+  .audio-hero-image__phone__image {
+    bottom: -12.1875rem;
+    width: auto;
+    max-width: auto;
+  }
+
+  .audio-hero-image__container {
+    margin-bottom: 9.0625rem;
+    padding: 0;
+  }
+
+  .audio-hero-content__subHeadline {
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.4;
@@ -756,7 +795,7 @@ mark {
 
   .audio-hero-image {
     text-align: right;
-    background-image: url("https://www.blinkist.com/packs/static/audio-hero/images/background_wave-26d0b572705a4ff36afa.svg");
+    background-image: url("https://www.blinkist.com/packs/static/audio-hero/images/background_wave_tablet-2cb7a61197f18e822f78.svg");
     background-position: bottom right;
     background-size: contain;
   }
@@ -805,7 +844,7 @@ mark {
     grid-column-gap: 1.5rem;
   }
 
-  .subheadline--size-medium {
+  .subHeadline--size-medium {
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.4;
@@ -860,7 +899,7 @@ mark {
     text-align: center;
   }
 
-  .audio-hero-content__subheadline {
+  .audio-hero-content__subHeadline {
     font-size: 1.25rem;
     line-height: 1.4;
     color: #3a4649;
@@ -889,7 +928,7 @@ mark {
     color: #03314b;
   }
 
-  .main-feature__subheadline {
+  .main-feature__subHeadline {
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.4;
@@ -898,6 +937,12 @@ mark {
 
   .figures__data {
     padding: 3rem 2rem;
+  }
+
+  .footer-bottom__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .figures__text {
@@ -912,7 +957,21 @@ mark {
 @media (min-width: 1024px) {
   .audio-hero-content__headline {
     margin-top: 4rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .audio-hero-image__phone__image {
+    bottom: -3.75rem;
+  }
+
+  .footer-bottom__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .audio-hero-image__container {
+    margin-bottom: 0;
   }
 
   .audio-hero__image {
@@ -994,7 +1053,7 @@ mark {
     visibility: visible;
   }
 
-  .audio-hero-content__subheadline {
+  .audio-hero-content__subHeadline {
     margin-bottom: 2rem;
     grid-area: 2/1/2/8;
   }
