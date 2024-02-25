@@ -15,8 +15,8 @@ export interface SelectType {
 }
 function Interested({ dataSource }: PropType) {
   const [selected, setSelected] = useState<SelectType>({
-    title: dataSource[0].title,
-    bookNum: dataSource[0].bookNum,
+    title: dataSource?.[0].title,
+    bookNum: dataSource?.[0].bookNum,
   });
 
   const handleClickType = (params: SelectType) => {
@@ -34,7 +34,7 @@ function Interested({ dataSource }: PropType) {
       <div className="category-explorer__category-selector">
         <div className="max-w-5xl lg:mx-auto">
           <div className="category-selector__chips mx-4 category-selector__chips--visible">
-            {dataSource.map(({ id, title, icon, bookNum }) => (
+            {dataSource?.map(({ id, title, icon, bookNum }) => (
               <button
                 onClick={() => handleClickType({ title, bookNum })}
                 key={id}
