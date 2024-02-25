@@ -1,4 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -13,24 +12,32 @@ pnpm dev
 # or
 bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 克隆 [blinkist](www.blinkist.com) 网站 首页和详情页
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# 首页
+![alt text](./MarkdownPic/image.png)
 
-To learn more about Next.js, take a look at the following resources:
+  1. 实现页面布局
+  2. 响应式(头部响应式、页面响应式)
+  3. 响应式菜单栏,普通菜单栏
+  ![alt text](./MarkdownPic/image-1.png)
+  4. 字体定时高亮
+  ![alt text](./MarkdownPic/image-2.png)
+  5. 选中不同主题,显示不同轮播图()
+  6. 轮播图功能(自定义hooks)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 详情页
+![alt text](./MarkdownPic/image-3.png)
+1. 页面整体布局(响应式)
+![alt text](./MarkdownPic/image-4.png)
+2. 隐藏显示功能
+3. 锚点功能
+![alt text](./MarkdownPic/image-5.png)
+4. 切换主体文章
+![alt text](./MarkdownPic/image-6.png)
+5. 单选问题功能
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# End

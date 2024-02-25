@@ -11,7 +11,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   const { value } = useMyContext();
   return (
-    <div className="bg-white">
+    <div className="bg-white minWidth">
       <Header />
       <main>{children}</main>
       <Footer />
