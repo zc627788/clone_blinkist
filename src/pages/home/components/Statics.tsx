@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Button from "../common/Button";
+import Button from "../../../components/common/Button";
 import { phoneData, staticsData } from "@/fakeData/data";
 
 const Statics = () => {
@@ -15,7 +15,7 @@ const Statics = () => {
 
     return () => clearInterval(interval);
   }, []);
-  
+
   return (
     <div className=" py-6 m:py-8 l:py-12  mt-12 max-w-5xl mx-auto  ">
       <div className=" lg:flex md:flex justify-between ">

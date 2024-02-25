@@ -1,16 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Navigation from "./Navigation";
+import { useMyContext } from "@/contexts/CustomContext";
 
 const Header = () => {
   const [clicked, setClicked] = useState(false);
+  const { setValue, value } = useMyContext();
 
   const [isSticky, setIsSticky] = useState(false);
   const headerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 500) {
+      if (!value && window.scrollY > 500) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
@@ -22,7 +24,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [value]);
 
   let arrowIcon = (
     <path
@@ -54,7 +56,11 @@ const Header = () => {
       }`}
     >
       <div className="max-w-5xl mx-auto flex justify-between  items-center  ">
-        <button aria-label="Open menu" className="p-3 mr-3 lg:hidden">
+        <button
+          onClick={() => setValue(true)}
+          aria-label="Open menu"
+          className="p-3 mr-3 lg:hidden"
+        >
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -73,7 +79,7 @@ const Header = () => {
         <div className="flex justify-between items-center" style={{ flex: 11 }}>
           <button
             data-test-id="toggle-categories-menu-button"
-            className="category flex items-center cursor-pointer font-medium text-midnight hover:text-indigo-500 focus:text-indigo-500 active:text-indigo-500"
+            className="category flex items-center cursor-pointer font-medium  hover:text-indigo-500 focus:text-indigo-500 active:text-indigo-500"
             onClick={handleToggle}
           >
             Categories

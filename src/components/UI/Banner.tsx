@@ -12,8 +12,8 @@ const AudioHeroBanner = () => (
               More knowledge <br className="hidden md:inline" /> in less time
             </h1>
             <div className="audio-hero-content__subHeadline text-gray-700 ">
-              Perfect for curious people who love to learn, busy people who don’t
-              have time to read, and even people who aren’t into reading.
+              Perfect for curious people who love to learn, busy people who
+              don’t have time to read, and even people who aren’t into reading.
             </div>
             <Button title={"Start your free trial"} />
           </div>

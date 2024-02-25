@@ -554,7 +554,6 @@ export const categories = [
   },
 ];
 
-
 export const staticsData = [
   "Be more knowledgeable",
   "Be more successful",
@@ -569,4 +568,88 @@ export const phoneData = [
   "Doing housework",
   "Walking",
   "Relaxing",
+];
+export const links = [
+  { title: "Categories", url: "/en/content/categories" },
+  {
+    title: "Productivity",
+    url: "/en/content/categories/productivity-and-time-management-en",
+  },
+  {
+    title: "The 5 AM Club summary",
+    url: "/en/content/categories/the-5-am-club-summary",
+  },
+];
+export const summary = [
+  {
+    id: 1,
+    title: "The 5 AM Club Summary of 6 key ideas",
+    link: "#chapters-preview",
+  },
+  {
+    id: 2,
+    title: "What is The 5 AM Club about?",
+    link: "#about-the-book-section",
+  },
+  {
+    id: 3,
+    title: "The 5 AM Club Review",
+    link: "#book-review-section",
+  },
+  {
+    id: 4,
+    title: "Best quote from The 5 AM Club",
+    link: "#book-quotes",
+  },
+  {
+    id: 5,
+    title: "Who should read The 5 AM Club?",
+    link: "#who-should-read-section",
+  },
+  {
+    id: 6,
+    title: "About the Author",
+    link: "#about-the-author",
+  },
+  {
+    id: 7,
+    title: "Book summaries like The 5 AM Club",
+    link: "#similar-books",
+  },
+  {
+    id: 8,
+    title: "People also liked these summaries",
+    link: "#people-also-like-books",
+  },
+  {
+    id: 9,
+    title: "The 5 AM Club FAQs",
+    link: "#faqs-section",
+  },
+];
+
+export const faqsData = [
+  {
+    id: 1,
+    question: "What is the main message of The 5 AM Club?",
+    answer:
+      "The main message of The 5 AM Club is the power of starting your day early and prioritizing personal growth.",
+  },
+  {
+    id: 2,
+    question: "How long does it take to read The 5 AM Club?",
+    answer:
+      "The reading time for The 5 AM Club varies, but it typically takes a few hours. The Blinkist summary can be read in just 15 minutes.",
+  },
+  {
+    id: 3,
+    question: "Is The 5 AM Club a good book? Is it worth reading?",
+    answer:
+      "The 5 AM Club is worth reading for its insights on creating a successful morning routine and transforming your life.",
+  },
+  {
+    id: 4,
+    question: "Who is the author of The 5 AM Club?",
+    answer: "The author of The 5 AM Club is Robin Sharma.",
+  },
 ];
