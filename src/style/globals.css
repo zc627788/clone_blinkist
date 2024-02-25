@@ -92,7 +92,6 @@ a {
   font-weight: 400;
   line-height: 1.5;
   color: #042330;
-  /* Note: This color value will override the one in #3a4649 */
   grid-column: auto/span 12;
   width: 100%;
   margin-bottom: 1.5rem;
@@ -117,7 +116,7 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.33;
-  color: #03314b;
+  color: #ccc;
 }
 
 .figures__data {
@@ -290,7 +289,6 @@ a {
 a:hover {
   color: #116be9;
   font-weight: inherit;
-  font-size: inherit;
   line-height: inherit;
   text-decoration: none;
 }
@@ -382,6 +380,15 @@ mark {
   margin-bottom: 1.5rem;
 }
 
+.light-pale-mint-grey {
+  background-color: #f8faf9
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.25rem;
+}
 
 .footer__headline {
   font-size: 1.125rem;
@@ -911,7 +918,7 @@ mark {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.33;
-    color: #03314b;
+    color: #ccc;
   }
 
   .main-features__headline {

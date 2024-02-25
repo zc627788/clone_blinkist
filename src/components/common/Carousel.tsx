@@ -1,27 +1,31 @@
 import React from "react";
 import Image from "next/image";
-import { SelectType } from "../UI/Interested";
+import { SelectType } from "@/pages/home/components/Interested";
 import useCarousel from "@/hooks/useCarousel";
 import { booksData } from "@/fakeData/data";
 
 interface PropType {
   titleDetail: SelectType;
+  notTitle?: boolean;
+  fontColor?: string;
 }
-const Carousel = ({ titleDetail }: PropType) => {
+const Carousel = ({ titleDetail, notTitle = false, fontColor }: PropType) => {
   const { carouselRef, next, prev, canGoNext, canGoPrev } = useCarousel(
     booksData[titleDetail.title] || []
   );
 
   return (
-    <div className="category-book-slider category-explorer__category-book-slider">
-      <div className="container m-auto max-w-5xl">
-        <h3 className="category-book-slider__headline mb-4 md:mb-2  font-bold   text-2xl ">
-          Most popular in <mark>{titleDetail.title}</mark>
-        </h3>
-        <div className="category-book-slider__subHeadline mb-8 subHeadline subHeadline--normal subHeadline--size-medium">
-          Read or listen to {titleDetail.bookNum} titles in this category
+    <div className="category-book-slider category-explorer__category-book-slider  ">
+      {!notTitle && (
+        <div className="container m-auto max-w-5xl">
+          <h3 className="category-book-slider__headline mb-4 md:mb-2  font-bold   text-2xl ">
+            Most popular in <mark>{titleDetail.title}</mark>
+          </h3>
+          <div className="category-book-slider__subHeadline mb-8 subHeadline subHeadline--normal subHeadline--size-medium">
+            Read or listen to {titleDetail.bookNum} titles in this category
+          </div>
         </div>
-      </div>
+      )}
       {(booksData[titleDetail.title] && (
         <div className="category-book-slider__books  m-auto max-w-5xl ">
           <div className="flex max-w-256 lg:mx-auto">
@@ -86,17 +90,25 @@ const Carousel = ({ titleDetail }: PropType) => {
                           </picture>
                         </figure>
                         <div className="book-card-mini__content">
-                          <div className="book-card-mini__content">
-                            <h4 className="book-card-mini__headline">
+                          <div className={`book-card-mini__content`}>
+                            <h4
+                              className={`book-card-mini__headline ${fontColor}`}
+                            >
                               {title}
                             </h4>
-                            <div className="book-card-mini__author">
+                            <div
+                              className={`book-card-mini__author ${fontColor}`}
+                            >
                               {author}
                             </div>
-                            <div className="book-card-mini__subHeadline">
+                            <div
+                              className={`book-card-mini__subHeadline ${fontColor}`}
+                            >
                               {subtitle}
                             </div>
-                            <div className="book-card-mini__duration">
+                            <div
+                              className={`book-card-mini__duration ${fontColor}`}
+                            >
                               {duration}
                             </div>
                           </div>
