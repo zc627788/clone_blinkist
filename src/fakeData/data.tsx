@@ -18,7 +18,7 @@ export const features = [
     alt: "Shortcasts",
     headline: "Shortcasts",
     subHeadline:
-      "We’ve teamed up with podcast creators to bring you key insights from podcasts.",
+      "We've teamed up with podcast creators to bring you key insights from podcasts.",
   },
 ];
 

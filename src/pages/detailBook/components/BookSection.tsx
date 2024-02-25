@@ -1,6 +1,7 @@
 import Button from "@/components/common/Button";
 import { links, summary } from "@/fakeData/data";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 interface SummaryProp {
@@ -107,9 +108,9 @@ const SummaryOfContents = ({ items }: SummaryProp) => {
                 index === 0 ? "first:mt-4" : ""
               } mb-4 last:mb-0  text-gray-800 font-medium text-sm`}
             >
-              <a href={item.link} className="underline">
+              <Link href={item.link} className="underline">
                 {item.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
