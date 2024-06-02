@@ -1,4 +1,10 @@
 
+#blinkist demo
+
+## online
+### [home](https://clone-blinkist.vercel.app/home)
+### [detailBook](https://clone-blinkist.vercel.app/detailBook)
+
 ## Getting Started
 
 First, run the development server:
